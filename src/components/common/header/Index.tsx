@@ -116,7 +116,10 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/imprimir" className="text-sm/6 font-semibold text-gray-900">
+          <a
+            href=" /morales-copy/imprimir"
+            className="text-sm/6 font-semibold text-gray-900"
+          >
             Imprimir
           </a>
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
