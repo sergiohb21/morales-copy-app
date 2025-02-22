@@ -13,6 +13,7 @@ export default defineConfig({
   integrations: [react()],
 
   vite: {
+    base,
     plugins: [tailwindcss()],
   },
 });
