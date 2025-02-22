@@ -9,13 +9,13 @@ export const services = [
   {
     name: "Imprimir",
     description: "Sube tus archivos para imprimir",
-    href: "/morales-copy-app/imprimir",
+    href: "/imprimir",
     icon: PrinterIcon,
   },
   {
     name: "Presupuestos",
     description: "Consulta tu presupuesto de impresión personalizado",
-    href: "/morales-copy-app/presupuestos",
+    href: "/presupuestos",
     icon: CurrencyEuroIcon,
   },
 ];

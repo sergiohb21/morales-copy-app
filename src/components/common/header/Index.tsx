@@ -87,7 +87,7 @@ export default function Header() {
                     </div>
                     <div className="flex-auto">
                       <a
-                        href={`/morales-copy-app${item.href}`}
+                        href={item.href}
                         className="block font-semibold text-gray-900"
                       >
                         {item.name}
@@ -102,7 +102,7 @@ export default function Header() {
                 {callsToAction.map((item) => (
                   <a
                     key={item.name}
-                    href={`/morales-copy-app${item.href}`}
+                    href={item.href}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
                   >
                     <item.icon
@@ -117,7 +117,7 @@ export default function Header() {
           </Popover>
 
           <a
-            href="/morales-copy-app/imprimir"
+            href="/imprimir"
             className="text-sm/6 font-semibold text-gray-900"
           >
             Imprimir
