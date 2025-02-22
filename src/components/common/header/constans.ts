@@ -9,7 +9,7 @@ export const services = [
   {
     name: "Imprimir",
     description: "Sube tus archivos para imprimir",
-    href: `${import.meta.env.BASE_URL}/imprimir`,
+    href: "/imprimir",
     icon: PrinterIcon,
   },
   {
@@ -23,12 +23,12 @@ export const services = [
 export const callsToAction = [
   {
     name: "Localiza nuestra tienda",
-    href: `${import.meta.env.BASE_URL}/#`,
+    href: "/#",
     icon: MapIcon,
   },
   {
     name: "Contacta con nosotros",
-    href: `${import.meta.env.BASE_URL}/#`,
+    href: "#",
     icon: PhoneIcon,
   },
 ];
