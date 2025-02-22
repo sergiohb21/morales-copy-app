@@ -8,7 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://sergiohb21.github.io",
-  base: "morales-copy",
+  base: "morales-copy-app",
   integrations: [react()],
 
   vite: {
