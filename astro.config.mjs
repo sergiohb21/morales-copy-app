@@ -8,7 +8,7 @@ const base = process.env.GITHUB_ACTIONS ? "/morales-copy-app/" : "/";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://sergiohb21.github.io",
+  site: "https://sergiohb21.github.io/morales-copy-app",
   base,
   integrations: [react()],
 
