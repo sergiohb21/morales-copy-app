@@ -1,6 +1,6 @@
 export type TPrintFormat = "A4" | "A3" | "Letter" | "Legal";
 
-export type TFileType = "pdf" | "docx" | "pptx" | "txt";
+export type TTypeFormat = "pdf" | "docx" | "pptx" | "txt";
 
 export type TColorMode = "black_and_white" | "color";
 
@@ -25,9 +25,9 @@ export type TItemDisplayInfo = Pick<
   FileStore,
   | "id"
   | "name"
-  | "type"
+  | "typeFormat"
   | "size"
-  | "format"
+  | "printFormat"
   | "copies"
   | "color"
   | "slidesPerPage"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   addFileItem,
   FilesStore,
@@ -33,6 +33,9 @@ export default function InitFileUploader() {
       duplex: "none",
       orientation: "portrait",
     });
+
+    // 🔥 Restablecer el input para permitir volver a elegir el mismo archivo
+    target.value = "";
   };
 
   const handleRemoveFile = (id: string) => {
@@ -43,6 +46,10 @@ export default function InitFileUploader() {
     setSelectedFile(file);
     isOptionsPrintModalOpen.set(!$isOptionsPrintModalOpen);
   };
+
+  useEffect(() => {
+    console.log("FilesStore", FilesStore.get());
+  }, [FilesStore.get()]);
 
   return (
     <div className="max-w-xl mx-auto p-4 bg-white rounded-md shadow-lg my-4">

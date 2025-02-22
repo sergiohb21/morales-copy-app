@@ -25,5 +25,8 @@
   "volta": {
     "node": "22.13.1",
     "yarn": "4.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5"
   }
 }

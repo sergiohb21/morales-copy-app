@@ -11,7 +11,7 @@ type OptionsModalProps = {
 const OptionsModal: React.FC<OptionsModalProps> = ({ file }) => {
   const [formData, setFormData] = useState<TFilesStore>({ ...file });
   const [isModified, setIsModified] = useState(false);
-  const $isModalOpen = useStore(isOptionsPrintModalOpen);
+  const $isOptionsPrintModalOpen = useStore(isOptionsPrintModalOpen);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -48,12 +48,23 @@ const OptionsModal: React.FC<OptionsModalProps> = ({ file }) => {
   };
 
   const handleSubmit = () => {
-    addFileItem(formData);
+    addFileItem({
+      id: formData.id,
+      name: formData.name,
+      typeFormat: formData.typeFormat,
+      size: formData.size,
+      printFormat: formData.printFormat,
+      copies: formData.copies,
+      color: formData.color,
+      slidesPerPage: formData.slidesPerPage,
+      duplex: formData.duplex,
+      orientation: formData.orientation,
+    });
     isOptionsPrintModalOpen.set(false);
   };
 
   return (
-    $isModalOpen && (
+    $isOptionsPrintModalOpen && (
       <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
         <div
           role="dialog"
