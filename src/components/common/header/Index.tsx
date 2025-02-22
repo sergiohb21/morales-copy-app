@@ -29,7 +29,6 @@ export default function Header() {
   const $isCartModalOpen = useStore(isCartModalOpen);
 
   const handleToggleModal = () => {
-    debugger;
     isCartModalOpen.set(!$isCartModalOpen);
   };
 

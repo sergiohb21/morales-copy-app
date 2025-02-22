@@ -15,7 +15,7 @@ export const services = [
   {
     name: "Presupuestos",
     description: "Consulta tu presupuesto de impresión personalizado",
-    href: `${import.meta.env.BASE_URL}/presupuestos`,
+    href: "/presupuestos",
     icon: CurrencyEuroIcon,
   },
 ];
