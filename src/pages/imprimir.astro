@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import InitFileUploader from "../components/fileUploader/Index.js";
 import Header from "../components/common/header/Index.js";
 import CartModal from "../components/common/cart/Index.js";
 ---
 
 <Layout>
   <Header client:load />
+  <InitFileUploader client:load />
   <!-- <CartModal client:only /> -->
 </Layout>
