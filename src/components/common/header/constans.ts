@@ -9,13 +9,13 @@ export const services = [
   {
     name: "Imprimir",
     description: "Sube tus archivos para imprimir",
-    href: "/imprimir",
+    href: "imprimir",
     icon: PrinterIcon,
   },
   {
     name: "Presupuestos",
     description: "Consulta tu presupuesto de impresión personalizado",
-    href: "/presupuestos",
+    href: "presupuestos",
     icon: CurrencyEuroIcon,
   },
 ];
@@ -23,7 +23,7 @@ export const services = [
 export const callsToAction = [
   {
     name: "Localiza nuestra tienda",
-    href: "/#",
+    href: "#",
     icon: MapIcon,
   },
   {

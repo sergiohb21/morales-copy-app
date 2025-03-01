@@ -27,6 +27,7 @@ import { useStore } from "@nanostores/react";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const $isCartModalOpen = useStore(isCartModalOpen);
+  console.log("||||BASE_URL", import.meta.env.BASE_URL);
 
   const handleToggleModal = () => {
     isCartModalOpen.set(!$isCartModalOpen);
@@ -59,6 +60,12 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <a href="/">
+            <HomeIcon
+              aria-hidden="true"
+              className="size-5 flex-none text-gray-400"
+            />
+          </a>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
               Servicios
@@ -67,7 +74,6 @@ export default function Header() {
                 className="size-5 flex-none text-gray-400"
               />
             </PopoverButton>
-
             <PopoverPanel
               transition
               className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
@@ -86,7 +92,7 @@ export default function Header() {
                     </div>
                     <div className="flex-auto">
                       <a
-                        href={`${import.meta.env.BASE_URL}/${item.href}`}
+                        href={`${import.meta.env.BASE_URL}${item.href}`}
                         className="block font-semibold text-gray-900"
                       >
                         {item.name}
@@ -101,7 +107,7 @@ export default function Header() {
                 {callsToAction.map((item) => (
                   <a
                     key={item.name}
-                    href={`${import.meta.env.BASE_URL}/${item.href}`}
+                    href={`${import.meta.env.BASE_URL}${item.href}`}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
                   >
                     <item.icon
@@ -116,19 +122,19 @@ export default function Header() {
           </Popover>
 
           <a
-            href={`${import.meta.env.BASE_URL}/imprimir`}
+            href={`${import.meta.env.BASE_URL}imprimir`}
             className="text-sm/6 font-semibold text-gray-900"
           >
             Imprimir
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}/#`}
+            href={`${import.meta.env.BASE_URL}#`}
             className="text-sm/6 font-semibold text-gray-900"
           >
             Estudiantes
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}/#`}
+            href={`${import.meta.env.BASE_URL}#`}
             className="text-sm/6 font-semibold text-gray-900"
           >
             Compañia
@@ -137,7 +143,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
           <div className="flex items-center">
             <a
-              href={`${import.meta.env.BASE_URL}/#`}
+              href={`${import.meta.env.BASE_URL}#`}
               className="text-sm/6 font-semibold text-gray-900"
             >
               <div className="flex items-center pl-3">
@@ -171,7 +177,7 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href={`${import.meta.env.BASE_URL}/#`} className="-m-1.5 p-1.5">
+            <a href={`${import.meta.env.BASE_URL}#`} className="-m-1.5 p-1.5">
               <span className="sr-only">Nuestra compañia</span>
               <img
                 alt=""
@@ -210,7 +216,7 @@ export default function Header() {
                       <DisclosureButton
                         key={item.name}
                         as="a"
-                        href={`${import.meta.env.BASE_URL}/${item.href}`}
+                        href={`${import.meta.env.BASE_URL}${item.href}`}
                         className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                       >
                         <div className="flex items-center">
@@ -225,7 +231,7 @@ export default function Header() {
                   </DisclosurePanel>
                 </Disclosure>
                 <a
-                  href={`${import.meta.env.BASE_URL}/#`}
+                  href={`${import.meta.env.BASE_URL}#`}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   <div className="flex items-center">
@@ -237,7 +243,7 @@ export default function Header() {
                   </div>
                 </a>
                 <a
-                  href={`${import.meta.env.BASE_URL}/#`}
+                  href={`${import.meta.env.BASE_URL}#`}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   <div className="flex items-center">
@@ -252,7 +258,7 @@ export default function Header() {
               <div className="py-6">
                 <a
                   onClick={handleToggleModal}
-                  href={`${import.meta.env.BASE_URL}/#`}
+                  href={`${import.meta.env.BASE_URL}#`}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   <div className="flex items-center">
@@ -266,7 +272,7 @@ export default function Header() {
               </div>
               <div className="py-6">
                 <a
-                  href={`${import.meta.env.BASE_URL}/#`}
+                  href={`${import.meta.env.BASE_URL}#`}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   <div className="flex items-center">
